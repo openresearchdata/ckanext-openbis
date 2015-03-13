@@ -1,6 +1,8 @@
-# CKAN Harvester for OpenBis (OAI-PMH)
+# CKAN Harvester for openBis (OAI-PMH)
 
 [![Build Status](https://travis-ci.org/openresearchdata/ckanext-openbis.svg?branch=master)](https://travis-ci.org/openresearchdata/ckanext-openbis)
+
+This harvester uses the [OAI-PMH interface](http://www.openarchives.org/pmh/) of [openBis](http://www.cisd.ethz.ch/software/openBIS) to harvest metadata.
 
 ## Instructions
 
@@ -23,8 +25,8 @@ Make sure the ckanext-oaipmh and ckanext-harvest extension are installed as well
 - add `openbis_harvester` to `ckan.plugins` in `development.ini` (or `production.ini`)
 - restart your webserver
 - with the web browser go to `<your ckan url>/harvest/new`
-- as URL fill in the base URL of an OAI-PMH conforming OpenBis instance
-- select **Source type** `OpenBis`
+- as URL fill in the base URL of an OAI-PMH conforming openBis instance
+- select **Source type** `openBis`
 - if your OAI-PMH needs credentials, add the following to the "Configuration" section: `{"username": "foo", "password": "bar" } `
 - if you only want to harvest a specific set, add the following to the "Configuration" section: `{"set": "baz"} `
 - Save

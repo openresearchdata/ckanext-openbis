@@ -14,7 +14,7 @@ class OpenbisHarvester(OaipmhHarvester):
         Return information about this harvester.
         '''
         return {
-            'name': 'OpenBis',
-            'title': 'OpenBis',
-            'description': 'Harvester for OpenBis (OAI-PMH) data sources'
+            'name': 'openBis',
+            'title': 'openBis',
+            'description': 'Harvester for openBis (OAI-PMH) data sources'
         }
