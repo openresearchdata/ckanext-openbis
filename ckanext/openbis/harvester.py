@@ -41,3 +41,6 @@ class OpenbisHarvester(OaipmhHarvester):
                 url = ident
                 break
         return url
+
+    def _extract_author(self, content):
+        return content['creator'] + ', ' + content['contributors']
