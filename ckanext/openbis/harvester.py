@@ -32,3 +32,12 @@ class OpenbisHarvester(OaipmhHarvester):
         if content['rights'] in license_map:
             return license_map[content['rights']]
         return content['rights']
+
+    def _get_possible_resource(self, harvest_obj, content):
+        url = None
+        candidates = content['source']
+        for ident in candidates:
+            if ident.startswith('http://') or ident.startswith('https://'):
+                url = ident
+                break
+        return url
